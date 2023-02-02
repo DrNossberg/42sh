@@ -1,3 +1,7 @@
+# Exec output
+42sh
+.cc_compile
+
 # Prerequisites
 *.d
 
@@ -50,3 +54,6 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+#Sublime-related files
+*.sublime-*

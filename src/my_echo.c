@@ -1,6 +1,10 @@
 /*
-** EPITECH PROJECT, 2017
-** PSU_42sh_2017
+** Cnam, en partenariat avec l'ITII Alsace, 2023
+** Projet :
+**    42sh
+** Author :
+**    Julien  DUBOCAGE
+**    Antoine ORION
 ** File description:
 ** Created by davy.henry,
 */

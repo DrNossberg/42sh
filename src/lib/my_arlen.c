@@ -1,6 +1,10 @@
 /*
-** EPITECH PROJECT, 2018
-** my_arlen
+** Cnam, en partenariat avec l'ITII Alsace, 2023
+** Projet :
+**    42sh
+** Author :
+**    Julien  DUBOCAGE
+**    Antoine ORION
 ** File description:
 ** return the length of an array
 */

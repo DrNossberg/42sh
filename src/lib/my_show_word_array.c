@@ -1,6 +1,10 @@
 /*
-** EPITECH PROJECT, 2017
-** my_show_word_array
+** Cnam, en partenariat avec l'ITII Alsace, 2023
+** Projet :
+**    42sh
+** Author :
+**    Julien  DUBOCAGE
+**    Antoine ORION
 ** File description:
 ** .c
 */

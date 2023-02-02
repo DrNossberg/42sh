@@ -1,6 +1,10 @@
 /*
-** EPITECH PROJECT, 2018
-** my
+** Cnam, en partenariat avec l'ITII Alsace, 2023
+** Projet :
+**    42sh
+** Author :
+**    Julien  DUBOCAGE
+**    Antoine ORION
 ** File description:
 ** .h
 */
@@ -40,7 +44,6 @@ char **find_setenv(char **save, char **tab);
 void my_error(char *str);
 char **modify_env(char **env, char **tab, nb_exit_t **buffer);
 char **my_espace(char *str);
-char *my_strdup(char *src);
 char *find_home(char **env);
 char *only_cd(char *buffer, char **env, char **tab);
 int len_tab(char **str);

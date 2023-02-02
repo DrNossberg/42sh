@@ -1,6 +1,10 @@
 /*
-** EPITECH PROJECT, 2018
-** special_case
+** Cnam, en partenariat avec l'ITII Alsace, 2023
+** Projet :
+**    42sh
+** Author :
+**    Julien  DUBOCAGE
+**    Antoine ORION
 ** File description:
 ** .c
 */
@@ -9,7 +13,7 @@
 
 char **without_coma(char **tab, char *path)
 {
-	tab[0] = my_strdup(path + 5);
+	tab[0] = strdup(path + 5);
 	tab[0] = check_path_bis(tab[0], strlen(path + 5));
 	tab[1] = NULL;
 	return (tab);

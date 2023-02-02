@@ -1,9 +1,13 @@
 /*
-** EPITECH PROJECT, 2017
-** my_str_to_word_array
+** Cnam, en partenariat avec l'ITII Alsace, 2023
+** Projet :
+**    42sh
+** Author :
+**    Julien  DUBOCAGE
+**    Antoine ORION
 ** File description:
-** take a string as parameter and return an array,
-** whose each case if filled with one word of th string.
+** 	  take a string as parameter and return an array,
+**    whose each case if filled with one word of th string.
 */
 
 #include <stdlib.h>

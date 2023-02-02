@@ -1,6 +1,10 @@
 /*
-** EPITECH PROJECT, 2018
-** parse
+** Cnam, en partenariat avec l'ITII Alsace, 2023
+** Projet :
+**    42sh
+** Author :
+**    Julien  DUBOCAGE
+**    Antoine ORION
 ** File description:
 ** .c
 */
@@ -26,7 +30,7 @@ char *new_cmd(char *instru, int i)
 
 char *recup_name_file(char *instru)
 {
-	char *tmp = my_strdup(instru);
+	char *tmp = strdup(instru);
 
 	for (; *tmp && (*tmp == ' ' || *tmp == '\t'); tmp++);
 	return (tmp);
