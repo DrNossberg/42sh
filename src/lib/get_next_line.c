@@ -1,12 +1,8 @@
-/*
-** Cnam, en partenariat avec l'ITII Alsace, 2023
-** Projet :
-**    42sh
-** Author :
-**    Julien  DUBOCAGE
-**    Antoine ORION
-** File description:
-** .c
+/**
+* @file get_next_line.c
+* Functions for retrieving user input
+* @author Antoine Orion
+* @author Julien Dubocage
 */
 
 #include <stdlib.h>
@@ -100,6 +96,12 @@ static char *init_buffer(char *buffer, int fd)
 	return (buffer);
 }
 
+/**
+ * @brief Reads a line from the file descriptor fd and returns the result as a char*
+ * This function allocates memory for the result and must be freed by the caller.
+ * @param fd The file descriptor from which to read the line
+ * @return The line read from the file descriptor as a char*
+*/
 char *get_next_line(int fd)
 {
 	static char *buffer;

@@ -1,12 +1,7 @@
-/*
-** Cnam, en partenariat avec l'ITII Alsace, 2023
-** Projet :
-**    42sh
-** Author :
-**    Julien  DUBOCAGE
-**    Antoine ORION
-** File description:
-** .h
+/**
+* @file get_next_line.h
+* @author Antoine Orion
+* @author Julien Dubocage
 */
 
 #ifndef GET_NEXT_LINE_H_

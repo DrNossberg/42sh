@@ -1,13 +1,9 @@
-/*
-** Cnam, en partenariat avec l'ITII Alsace, 2023
-** Projet :
-**    42sh
-** Author :
-**    Julien  DUBOCAGE
-**    Antoine ORION
-** File description:
-** Created by pierro,
+/**
+* @file my_cwd.c
+* @author Antoine Orion
+* @author Julien Dubocage
 */
+
 #include "../include/my.h"
 #include "../include/my_exit.h"
 

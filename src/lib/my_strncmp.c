@@ -1,12 +1,7 @@
-/*
-** Cnam, en partenariat avec l'ITII Alsace, 2023
-** Projet :
-**    42sh
-** Author :
-**    Julien  DUBOCAGE
-**    Antoine ORION
-** File description:
-** .c
+/**
+* @file my_strncmp.c
+* @author Antoine Orion
+* @author Julien Dubocage
 */
 
 int my_strncmp(char *s1, char *s2, int n)

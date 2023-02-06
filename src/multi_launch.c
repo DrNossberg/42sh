@@ -1,12 +1,7 @@
-/*
-** Cnam, en partenariat avec l'ITII Alsace, 2023
-** Projet :
-**    42sh
-** Author :
-**    Julien  DUBOCAGE
-**    Antoine ORION
-** File description:
-** .c
+/**
+* @file multi-launch.c
+* @author Antoine Orion
+* @author Julien Dubocage
 */
 
 #include "../include/my.h"
@@ -70,6 +65,15 @@ int check_prog(char **part_path, char **tab, char **env, nb_exit_t **buffer)
 	return (permi_for_instru(tab, env, buffer));
 }
 
+/**
+ * @fn char **lauch_cmd(char *save, char **env, nb_exit_t **buffer)
+ * @brief Execute piped commands
+ * Check for errors then launches a linux command by splitting it into separate pipes and then executing each pipe
+ * @param save Command string read from user input
+ * @param env Array of environment variables used by the shell
+ * @param buffer Pointer to a structure that holds info about the current shell's state
+ * @return env Array of environment variables after execution of the user input
+ */
 char **lauch_cmd(char *save, char **env, nb_exit_t **buffer)
 {
 	char **pipe = my_str_array(save, '|');
@@ -80,6 +84,12 @@ char **lauch_cmd(char *save, char **env, nb_exit_t **buffer)
 	return (env);
 }
 
+/**
+ * @fn nb_exit_t *init_nb_exit(void)
+ * @brief Initializes a new structure of type nb_exit_t
+ * Create a new structure of type nb_exit_t and initializes its members with default values.
+ * @return Pointer to the newly created nb_exit_t structure, or NULL if malloc fails.
+*/
 nb_exit_t *init_nb_exit(void)
 {
 	nb_exit_t *new_element = malloc(sizeof(nb_exit_t));
