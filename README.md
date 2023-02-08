@@ -37,6 +37,13 @@ OPTIONS:
 		str	: sentence (example: emacs -nw)
 	Alias are temporary and are not saved
 
+BUILT-IN COMMANDS:  
+	- cd [destination]  
+	- setenv [variable] [value]  
+	- unsetenv [variable]  
+	- echo [variable / value]  
+	- cwd (pwd equivalent)  
+	- exit  
 
 the prompte change in accordance with the name of the current directory, ex:
 [PSU]$cd PSU_42sh_2017
@@ -48,6 +55,3 @@ Note that this 42sh deal with different redirections;
 	as <, <<, >>, >, |. 
 		
  -->
-
-
-
