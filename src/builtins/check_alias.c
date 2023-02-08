@@ -1,17 +1,21 @@
-/*
-** Cnam, en partenariat avec l'ITII Alsace, 2023
-** Projet :
-**    42sh
-** Author :
-**    Julien  DUBOCAGE
-**    Antoine ORION
-** File description:
-** Created by davy.henry,
+/**
+* @file check_alias.c
+* @author Antoine Orion
+* @author Julien Dubocage
 */
 
 #include <memory.h>
 #include "my_exit.h"
 
+/**
+ * @fn char *change_alias(char *save, alias_s *tmp, size_t a)
+ * Replaces the save string with the string associated with the alias
+ * @brief gets the real command from an alias
+ * @param save alias to replace
+ * @param tmp Pointer to the alias structure
+ * @param a length of the alias
+ * 
+*/
 static char *change_alias(char *save, alias_s *tmp, size_t a)
 {
 	char *alias = strdup(tmp->alias);
@@ -23,6 +27,14 @@ static char *change_alias(char *save, alias_s *tmp, size_t a)
 	return (alias);
 }
 
+/**
+ * @fn char *check_alias(nb_exit_t *buffer, char *save)
+ * 
+ * @brief checks if the command is an alias
+ * @param buffer Pointer to a structure that holds info about the current shell's state
+ * @param save alias to check
+ * @return the real command if the command is an alias, otherwise the save string
+*/
 char *check_alias(nb_exit_t *buffer, char *save)
 {
 	alias_s *tmp = buffer->alias;

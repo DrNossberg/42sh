@@ -1,16 +1,17 @@
-/*
-** Cnam, en partenariat avec l'ITII Alsace, 2023
-** Projet :
-**    42sh
-** Author :
-**    Julien  DUBOCAGE
-**    Antoine ORION
-** File description:
-** contain function to free
+/**
+* @file clean_array.c
+* @author Antoine Orion
+* @author Julien Dubocage
 */
 
 #include <stdlib.h>
 
+/**
+ * @fn void clean_ar(char **ar)
+ * @brief Frees the memory allocated to an array of strings
+ * @param ar Array of strings
+ * @return void
+*/
 void clean_ar(char **ar)
 {
 	for (int i = 0; ar[i]; i++)

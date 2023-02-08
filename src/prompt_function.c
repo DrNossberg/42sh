@@ -1,12 +1,7 @@
-/*
-** Cnam, en partenariat avec l'ITII Alsace, 2023
-** Projet :
-**    42sh
-** Author :
-**    Julien  DUBOCAGE
-**    Antoine ORION
-** File description:
-** contains some of the subfunctions for the minishell1
+/**
+* @file prompt_function.c
+* @author Antoine Orion
+* @author Julien Dubocage
 */
 
 #include <stdlib.h>
@@ -15,6 +10,11 @@
 #include <stdio.h>
 #include "my.h"
 
+/**
+ * @fn void prompt_way(void)
+ * @brief Displays the current working directory in the shell prompt
+ * @return void
+*/
 void prompt_way(void)
 {
 	char **arway;

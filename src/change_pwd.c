@@ -1,16 +1,17 @@
-/*
-** Cnam, en partenariat avec l'ITII Alsace, 2023
-** Projet :
-**    42sh
-** Author :
-**    Julien  DUBOCAGE
-**    Antoine ORION
-** File description:
-** Created by pierro,
+/**
+* @file change_pwd.c
+* @author Antoine Orion
+* @author Julien Dubocage
 */
 #include "../include/my.h"
 #include "../include/my_exit.h"
 
+/**
+ * @fn char **change_pwd(char **env)
+ * @brief Changes the value of the PWD (present working directory) variable in the environment
+ * @param env Array of environment variables used by the shell
+ * @return The modified environment
+*/
 char **change_pwd(char **env)
 {
 	int i = find_line(env, "PWD");

@@ -1,12 +1,8 @@
-/*
-** Cnam, en partenariat avec l'ITII Alsace, 2023
-** Projet :
-**    42sh
-** Author :
-**    Julien  DUBOCAGE
-**    Antoine ORION
-** File description:
-** .c
+/**
+* @file main.c
+* Main file of the project
+* @author Antoine Orion
+* @author Julien Dubocage
 */
 
 #include "my.h"
@@ -15,6 +11,14 @@
 #include "tokenizer.h"
 #include "lexer.h"
 
+/**
+ * @fn char **main_tree(char **t, char **env, nb_exit_t **buffer)
+ * @brief Run an external program that is not a shell built-in
+ * @param t array containing the command and its arguments
+ * @param env Array of environment variables used by the shell
+ * @param buffer Pointer to a structure that holds info about the current shell's state
+ * 
+*/
 char **main_tree(char **t, char **env, nb_exit_t **buffer)
 {
 	char *path = find_env(env);
@@ -38,6 +42,16 @@ char **main_tree(char **t, char **env, nb_exit_t **buffer)
 	return (env);
 }
 
+/**
+ *  
+ * @fn char **launch_pipe(char **env, char **save_instru, nb_exit_t **buffer)
+ * @brief Execute piped commands
+ * Handles piped commands, redirecting input and output as required
+ * @param env Array of environment variables used by the shell
+ * @param save_instru Array of commands to be executed in a pipeline
+ * @param buffer Pointer to a structure that holds info about the current shell's state
+ * @return Array of environment variables after execution of the pipeline
+*/
 char **launch_pipe(char **env, char **save_instru, nb_exit_t **buffer)
 {
 	int pipefd[2];
@@ -61,6 +75,16 @@ char **launch_pipe(char **env, char **save_instru, nb_exit_t **buffer)
 	return (env);
 }
 
+/**
+ * @fn char **lauch_cmd(char *save, char **env, nb_exit_t **buffer)
+ * Finds the bultin function associated with the command and calls it.
+ * If the command is not a bultin, the main_tree function is called to execute the external command using the operating system.
+ * @brief Finds and call the bultin command or execute the external command using the operating system.
+ * @param env Array of environment variables used by the shell
+ * @param save command string
+ * @param buffer Pointer to a structure that holds info about the current shell's state
+ * @return updated environment variables array.
+*/
 char **lauch_simple_cmd(char **env, char *save, nb_exit_t **buffer)
 {
 	int prog = 0;
@@ -78,6 +102,16 @@ char **lauch_simple_cmd(char **env, char *save, nb_exit_t **buffer)
 	return (env);
 }
 
+/**
+ *
+ * @fn char **main_deux(char *save, char **env, nb_exit_t **buffer)
+ * Handles the execution of multiple commands separated by a semicolon (;) in the user input
+ * @brief Function to handle multiple commands in the user input
+ * @param save User input to be executed as a command or multiple commands
+ * @param env Array of environment variables used by the shell
+ * @param buffer Pointer to a structure that holds info about the current shell's state
+ * @return Array of environment variables after execution of the user input
+*/
 char **main_deux(char *save, char **env, nb_exit_t **buffer)
 {
 	char **t;
@@ -98,6 +132,15 @@ char **main_deux(char *save, char **env, nb_exit_t **buffer)
 	return (env);
 }
 
+/**
+ * @fn int main(int ac, char **av, char **env)
+ * Handles the main loop that reads user input, calls functions to execute commands and handles system signals
+ * @brief Main project's function 
+ * @param ac Number of arguments
+ * @param av Array of arguments
+ * @param env Array of environment variables used by the shell
+ * 
+*/
 int main(int ac, char **av, char **env)
 {
 	char *save = NULL;

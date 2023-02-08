@@ -1,17 +1,19 @@
-/*
-** Cnam, en partenariat avec l'ITII Alsace, 2023
-** Projet :
-**    42sh
-** Author :
-**    Julien  DUBOCAGE
-**    Antoine ORION
-** File description:
-** .c
+/**
+* @file env_null.c
+* @author Antoine Orion
+* @author Julien Dubocage
 */
 
 #include "my.h"
 #include "my_exit.h"
 
+/**
+ * @fn int env_null(char **tab, char **env, nb_exit_t **buffer)
+ * @brief Checks if the command is valid
+ * @param tab Array of strings containing the command
+ * @param env Array of environment variables used by the shell
+ * @param buffer Pointer to a structure that holds info about the current shell's state
+*/
 int env_null(char **tab, char **env, nb_exit_t **buffer)
 {
 	if (check_prog_two(tab, env, buffer) == 0)

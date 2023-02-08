@@ -1,12 +1,7 @@
-/*
-** Cnam, en partenariat avec l'ITII Alsace, 2023
-** Projet :
-**    42sh
-** Author :
-**    Julien  DUBOCAGE
-**    Antoine ORION
-** File description:
-** .c
+/**
+* @file my_strncat.c
+* @author Antoine Orion
+* @author Julien Dubocage
 */
 
 #include <stdlib.h>

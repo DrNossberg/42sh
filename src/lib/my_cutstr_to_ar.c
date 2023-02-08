@@ -1,13 +1,7 @@
-/*
-** Cnam, en partenariat avec l'ITII Alsace, 2023
-** Projet :
-**    42sh
-** Author :
-**    Julien  DUBOCAGE
-**    Antoine ORION
-** File description:
-** 	  take a string as parameter and return an array,
-**    whose each case if filled with one word of th string.
+/**
+* @file my_cutstr_to_ar.c
+* @author Antoine Orion
+* @author Julien Dubocage
 */
 
 #include <stdlib.h>
